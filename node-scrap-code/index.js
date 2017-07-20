@@ -50,3 +50,19 @@ _.map(...countriesLinkedList,
 for (var index in countries) {
   console.log(countries[index]);
 }
+
+[
+  { type: TYPE_QUERY_STRING, payload: '' },
+  { type: TYPE_QUERY_STRING, payload: 'F' },
+  { type: TYPE_QUERY_STRING, payload: 'Fr' },
+  { type: TYPE_QUERY_STRING, payload: 'Fra' },
+  { type: TYPE_QUERY_STRING, payload: 'Fran' },
+  { type: TYPE_QUERY_STRING, payload: 'Franc' },
+  { type: TYPE_QUERY_STRING, payload: 'France' }
+]
+// how do we debounce?
+.filter(({payload}) => payload > 2)
+.map(({payload}) => makeReplaceResultsAction(payload)) 
+// also, querying a datasource from the string should be async
+
+const epic = (action$, store) => newActionObservable
