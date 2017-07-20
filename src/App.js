@@ -7,7 +7,7 @@ import Results from './Results';
 import reducer from './reducers';
 import epicMiddleware from './epics';
 
-const initialState = { queryString: '', results: ['hello'] };
+const initialState = { queryString: '', results: [] };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer,
