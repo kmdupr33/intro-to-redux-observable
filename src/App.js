@@ -17,7 +17,14 @@ const store = createStore(reducer,
 
 const App = (props) => (
   <Provider store={store}>
-    <div>
+    <div style={{
+      height: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: 'column'
+    }}>
+      <h1>Countries Search</h1>
       <SearchField />
       <Results />
     </div>
