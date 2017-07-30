@@ -3,7 +3,7 @@ import React from 'react';
 
 const Results = ({searchResults}) => (
   <ul>
-    {searchResults.map((result, index) => <li key={index}>{result}</li>)}
+    {searchResults.map((result, index) => <li key={index}>{result.name}</li>)}
   </ul>
 );
 
